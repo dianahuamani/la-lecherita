@@ -1,8 +1,0 @@
-# Ignorar la carpeta node_modules
-node_modules/
-
-# Ignorar otros archivos innecesarios
-*.log
-.DS_Store
-*.pyc
-__pycache__/
