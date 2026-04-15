@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="bg-gray-100 py-10">
+
+    <div class="max-w-6xl mx-auto px-4">
+
+        <!-- TITULO PRINCIPAL -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-green-700">Galería</h2>
+            <p class="text-gray-600 mt-2">Conoce nuestro trabajo en el campo</p>
+        </div>
+
+        <!-- TABS -->
+        <div class="flex justify-center gap-10 border-b mb-10 text-sm font-semibold">
+            <button class="text-green-700 border-b-2 border-green-700 pb-2">
+                Nuestro trabajo
+            </button>
+            <button class="text-gray-500 hover:text-green-700 pb-2">
+                Capacitaciones
+            </button>
+            <button class="text-gray-500 hover:text-green-700 pb-2">
+                Ganado
+            </button>
+            <button class="text-gray-500 hover:text-green-700 pb-2">
+                Instalaciones
+            </button>
+        </div>
+
+        <!-- GRID PRINCIPAL -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+            <!-- CARD 1 (ProCompite) -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/procompite.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                        Capacitación
+                    </span>
+                    <h3 class="font-semibold mt-2">ProCompite - Región Lima</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Participación en el concurso de innovación agrícola con productores.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/capacitacion.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                        Campo
+                    </span>
+                    <h3 class="font-semibold mt-2">Capacitación a productores</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Formación en buenas prácticas de ordeño y nutrición animal.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/terrenos.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded">
+                        Ganado
+                    </span>
+                    <h3 class="font-semibold mt-2">Terrenos identificados</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Sistema de identificación con sensores para control del hato ganadero.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/hato.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                        Campo
+                    </span>
+                    <h3 class="font-semibold mt-2">Trabajo en el hato</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Manejo del ganado y prácticas de campo con nuestros asociados.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/vacas1.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                        Ganado
+                    </span>
+                    <h3 class="font-semibold mt-2">Vacas lecheras Holstein</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Nuestro hato principal con genética de alta producción lechera.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <img src="{{ url_for('static', filename='image/ordeño.jpg') }}"
+                     class="h-44 w-full object-cover">
+
+                <div class="p-4">
+                    <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
+                        Proceso
+                    </span>
+                    <h3 class="font-semibold mt-2">Ordeño mecánico tecnificado</h3>
+                    <p class="text-sm text-gray-600 mt-1">
+                        Proceso de ordeño con equipos modernos para garantizar higiene y calidad.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

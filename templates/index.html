@@ -1,87 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lechería</title>
+{% extends 'base.html' %}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+{% block content %}
 
-<body class="bg-gray-100">
+<section class="h-screen flex items-center justify-center text-center bg-green-100 px-4">
 
-<!-- HERO -->
-<section class="relative h-screen">
-    <img src="{{ url_for('static', filename='image/fondo.jpg') }}" 
-         class="absolute w-full h-full object-cover">
+    <div class="animate-pulse">
+        <h1 class="text-3xl md:text-6xl font-bold text-green-700 mb-4">
+            Leche fresca directo del campo
+        </h1>
 
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <p class="mb-6 text-lg">
+            Conoce nuestros productos y contactanos
+        </p>
 
-    <div class="relative z-10 flex flex-col justify-center items-center h-full text-white text-center">
-        <h1 class="text-5xl font-bold mb-4">Cooperativa Lechera</h1>
-        <p class="mb-6">Producción de leche de alta calidad</p>
-        <button class="bg-green-600 px-6 py-3 rounded-lg hover:bg-green-700">
-            Ver más
-        </button>
+        <a href="/contacto">
+            <button class="bg-green-700 text-white px-6 py-3 rounded hover:bg-green-800 transition">
+                Contáctanos
+            </button>
+        </a>
     </div>
+
 </section>
 
-<!-- NOSOTROS -->
-<section class="p-10 bg-white">
-    <h2 class="text-3xl font-bold text-green-700 mb-6">Asociación Lechería</h2>
-
-    <div class="grid md:grid-cols-2 gap-6">
-        <img src="{{ url_for('static', filename='image/vacas.jpg') }}" class="rounded-lg">
-
-        <div>
-            <p class="mb-4">
-                Somos una organización dedicada a la producción de leche fresca de alta calidad.
-            </p>
-
-            <div class="grid grid-cols-3 gap-4 text-center">
-                <div class="bg-gray-100 p-4 rounded">
-                    <h3 class="text-xl font-bold">14</h3>
-                    <p>Años</p>
-                </div>
-
-                <div class="bg-gray-100 p-4 rounded">
-                    <h3 class="text-xl font-bold">2900L</h3>
-                    <p>Producción</p>
-                </div>
-
-                <div class="bg-gray-100 p-4 rounded">
-                    <h3 class="text-xl font-bold">100%</h3>
-                    <p>Natural</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PRODUCTOS -->
-<section class="p-10 bg-green-700 text-white text-center">
-    <h2 class="text-3xl font-bold mb-6">Nuestro Producto</h2>
-
-    <div class="bg-white text-black p-6 rounded-lg max-w-xl mx-auto">
-        <h3 class="text-2xl font-bold mb-2">Leche fresca</h3>
-        <p class="mb-4">De alta calidad</p>
-
-        <button class="bg-green-600 text-white px-4 py-2 rounded">
-            Comprar
-        </button>
-    </div>
-</section>
-
-<!-- GALERÍA -->
-<section class="p-10 bg-gray-200">
-    <h2 class="text-3xl font-bold text-center text-green-700 mb-6">Galería</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-        <img src="{{ url_for('static', filename='image/img1.jpg') }}" class="rounded-lg">
-        <img src="{{ url_for('static', filename='image/img2.jpg') }}" class="rounded-lg">
-        <img src="{{ url_for('static', filename='image/img3.jpg') }}" class="rounded-lg">
-    </div>
-</section>
-
-</body>
-</html>
+{% endblock %}
